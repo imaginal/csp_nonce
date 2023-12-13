@@ -1,0 +1,8 @@
+<h1>Test CSP</h1>
+<p>nonce="<!--#echo var="nonce"-->"</p>
+<script nonce="<!--#echo var="nonce"-->">
+    document.write("This is good");
+</script>
+<script nonce="abcdef">
+    alert("This is bad");
+</script>
